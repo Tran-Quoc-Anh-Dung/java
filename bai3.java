@@ -1,23 +1,54 @@
+import java.util.Scanner;
+
 public class bai3
 {
-    public static void main(String[] args) {
-        
-        writeChars('=',20);
-        System.out.println();
-        for( int i=1; i<=10;i++)
-        {
-            writeChars('>',i);
-            writeChars(' ', 20-2*i);
-            writeChars('<',i);
-            System.out.println();
-        }
-    }
-
-    public static void writeChars(char ch, int number)
+    public static void main(String[] args) 
     {
-        for(int i=1; i<=number; i++)
+        System.out.println("Xin moi nhap [yes] hay [no]: ");
+        Scanner console = new Scanner(System.in);
+
+        String nhap = console.next();
+
+        if(nhap=="yes")
         {
-            System.out.print(ch);
+            System.out.println("Ban da nhap Yes.");
         }
+        else if(nhap=="no")
+        {
+            System.out.println("Ban da nhap No");
+        }
+        else 
+        {
+            System.out.println("Ban da khong nhap Yes hay No.");
+        }
+
+        //su dung equal
+        if(nhap.equals("yes"))
+        {
+            System.out.println("Ban da nhap Yes.");
+        }
+        else if(nhap.equals("no"))
+        {
+            System.out.println("Ban da nhap No.");
+        }
+        else 
+        {
+            System.out.println("Ban da khong nhap Yes hay No.");
+        }
+
+        //su dung equalsIgnoreCase
+        if(nhap.equalsIgnoreCase("yes"))
+        {
+            System.out.println("Ban da nhap Yes.");
+        }
+        else if(nhap.equalsIgnoreCase("no"))
+        {
+            System.out.println("Ban da nhap No.");
+        }
+        else 
+        {
+            System.out.println("Ban da khong nhap Yes hay No.");
+        }
+
     }
 }

@@ -1,40 +1,29 @@
+import java.util.Scanner;
+
 public class bai4
 {
-    public static void main(String[] args) {
-        drawTop();
-    }
-
-    public static void drawTop()
-    {   
-        writeChars('*',10);
-        System.out.println();
-
-        for(int i=0; i<3; i++)
-        {
-            writeChars('*',1);
-            writeSpaces(8);
-            writeChars('*',1);
-            System.out.println();
-        }
-
-        writeChars('*',10);
-    }
-
-    
-
-    public static void writeChars(char ch, int number)
+    public static void main(String[] args) 
     {
-        for(int i=1; i<=number; i++)
-        {
-            System.out.print(ch);
-        }
-    }
+        //nhap so luong
+        System.out.println("Xin moi nhap so luong: ");
+        Scanner console = new Scanner(System.in);
 
-    public static void writeSpaces(int number)
-    {
-        for( int i=1; i<=number; i++)
+        int n = console.nextInt();
+        int tong=0;
+
+        for (int i=1; i<=n; i++)
         {
-            System.out.print(" ");
+            System.out.print("Nhap so thu " + i +": ");
+            int so = console.nextInt();
+            tong= tong +so;
+            System.out.println("So # " + i + "=" + so);
         }
+
+        //Hien thi tong
+        System.out.println("Tong cua cac so = " +tong);
+
+        console.close();
+
+
     }
 }

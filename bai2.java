@@ -1,39 +1,37 @@
+import java.util.Scanner;
+
 public class bai2
 {
     public static void main(String[] args) {
-        drawTop();
-    }
+        System.out.println("Xin moi nhap so diem: ");
+        Scanner console = new Scanner(System.in);
 
-    public static void drawTop()
-    {
-            System.out.print("*");
-            writeSpaces(3);
-            System.out.print("*");
-            System.out.println();
+        double diem = console.nextDouble();
 
-            System.out.print("!");
-            writeSpaces(5);
-            System.out.print("!");
-            System.out.println();
+        String diemso="A";
 
-            System.out.print("'");
-            writeSpaces(8);
-            System.out.print("'");
-            System.out.println();
-
-            System.out.print("<");
-            writeSpaces(10);
-            System.out.print(">");
-            System.out.println();
-         
-    }
-
-    public static void writeSpaces(int number)
-    {
-        for( int i=1; i<=number; i++)
+        if(diem>=90)
         {
-            System.out.print(" ");
+            diemso="A";
         }
-        
+        else if(diem>=80)
+        {
+            diemso="B";
+        }
+        else if(diem>=70)
+        {
+            diemso="C";
+        }
+        else if(diem>=60)
+        {
+            diemso="D";
+        }
+        else 
+        {
+            diemso="F";
+        }
+
+        System.out.println("Xep loai la: " + diemso);
+
     }
 }

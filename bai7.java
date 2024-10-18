@@ -1,41 +1,15 @@
-import java.util.Scanner;
 public class bai7
 {
     public static void main(String[] args) {
-        Scanner console = new Scanner(System.in);
+        
+        String ten = "Phan Hoa";
+        String MSSV="2305CT";
+        double GPA= 3.89;
+        double DTB = 87;
 
-        // nhập tam giác 
-        System.out.println("Canh a: ");
-        double a= console.nextDouble();
-
-        System.out.println("Canh b: ");
-        double b=console.nextDouble();
-
-        System.out.println("Canh c: ");
-        double c=console.nextDouble();
-
-        System.out.println("Chu vi la: " + chuvi(a,b,c));
-        System.out.println("Nua Chu vi la: " + nuachuvi(a,b,c));
-        System.out.println("Dien tịch la: " + dientich(a,b,c));
-    }
-
-    public static double chuvi(double a, double b, double c)
-    {
-        double p=a+b+c;
-        return p;
-    }
-
-    public static double nuachuvi(double a, double b, double c)
-    {
-        chuvi(a,b,c);
-        double p=chuvi(a,b,c)/2;
-        return p;
-    }
-
-    public static double dientich(double a, double b, double c)
-    {
-        chuvi(a,b,c);
-        double p=chuvi(a,b,c);
-        return Math.sqrt(p*(p-a)*(p-b)*(p-c));
+        System.out.printf("Ten sinh vien:%10s \n",ten);
+        System.out.printf("MSSV   :%10s \n",MSSV);
+        System.out.printf("GPA      :%1.3f \n",GPA);
+        System.out.printf("DTB       :%3.0f \n" , DTB);
     }
 }

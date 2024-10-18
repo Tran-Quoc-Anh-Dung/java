@@ -1,21 +1,32 @@
 import java.util.Scanner;
+
 public class bai9
 {
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         Scanner console = new Scanner(System.in);
+        System.out.println("Ban muon mau gi? ");
+        String input = console.nextLine().trim().toUpperCase();
 
-        // nhập so n
-        System.out.println("Nhap so nguyen duong n: ");
-        int n= console.nextInt();
-
-        // Hiển thị mũ 2 từ 1 đến n
-        System.out.println("Cac so mu 2 tu 1 den n la: " + n + ":");
-        for(int i=1;i<=n;i++)
+        switch(input)
         {
-            System.out.println("2^" + i + "=" + (int)Math.pow(2,i));
+            case "B":
+                System.out.println("Ban da chon BLUE.");
+                break;
+
+            case "G":
+                System.out.println("Ban da chon GREEN.");
+                break;
+
+            case "R":
+                System.out.println("Ban da chon RED.");
+                break;
+
+            default:
+                System.out.println("Mau khong xac dinh " +input);
         }
-       
-       console.close();
+
+        console.close();
+
     }
-    
 }

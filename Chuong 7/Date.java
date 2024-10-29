@@ -143,6 +143,10 @@ public class Date
         Date date = new Date(2006, 07, 22);
         System.out.println("Ngay ban dau la: "+ date);
 
+        date.printDay();
+        date.printMonth();
+        date.printYear();
+
         //Di chuyển số ngày về phía trước 1 ngày
         date.addDays(-1);
         System.out.println("Ngay sau khi tru 1 ngay la: " + date);

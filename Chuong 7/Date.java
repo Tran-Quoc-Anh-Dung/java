@@ -18,6 +18,7 @@ public class Date
     //Hàm cộng số ngày vào Date hiện tại đã cho
     public void addDays(int days)
     {
+       
         day += days;
 
         //Kiểm tra ngày có vượt qua số ngày trong tháng không
@@ -124,6 +125,19 @@ public class Date
         return year + "/" + (month < 10 ? "0" : "") + month + "/" + (day < 10 ? "0" : "") + day;
     }
 
+    //Hiển thị ngày, tháng, năm
+    public void printDay()
+    {
+        System.out.println("Ngay la: " +day);
+    }
+    public void printMonth()
+    {
+        System.out.println("Thang la: " +month);
+    }
+    public void printYear()
+    {
+        System.out.println("Nam la: " + year);
+    }
     public static void main(String[] args) {
         //Tạo Date  với ngày 2006/07/22
         Date date = new Date(2006, 07, 22);
@@ -139,5 +153,9 @@ public class Date
 
         //Kiểm tra năm nhuận
         System.out.println("Nam hien tai co phai nam nhuan khong? " + date.isLeapYear());
+
+        date.printDay();
+        date.printMonth();
+        date.printYear();
     }
 }
